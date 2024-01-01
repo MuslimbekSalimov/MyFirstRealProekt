@@ -1,0 +1,191 @@
+.sign {
+    // display: none;
+    // justify-content: center;
+    // align-items: center;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // background-color: rgba(0, 0, 0, .5);
+    // opacity: 0;
+    // transition: opacity .2s ease;
+    display: none;
+}
+
+.sign.visible {
+    opacity: 1;
+}
+
+.in__sign {
+    display: block;
+}
+
+.sign__for {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+}
+
+.sign__close {
+    border: none;
+    background-color: #FFF;
+    padding-left: 300px;
+}
+
+.sign__heading {
+    color:  #333232;
+
+    /* medium 28 */
+    font-family: "Nuckle";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 591;
+    line-height: 36px; 
+}
+
+.sign__input {
+    display: flex;
+    width: 346px;
+    padding: 11px 216px 10px 14px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--Stroke-Primary, #E4E7EE);
+
+    color: var(--Text-secondary, #6C757D);
+
+    /* Regular 16 */
+    font-family: Nuckle;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.sign__button {
+    display: flex;
+    width: 346px;
+    height: 40px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Background-Main-color, #0D63F3);
+    border: none;
+
+    // Text 
+    color:  #FFF;
+    text-align: center;
+    
+    /* Regular 16 */
+    font-family: "Nuckle";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.sign__link {
+    color:  #0D63F3;
+    text-align: center;
+    
+    /* Regular 14 */
+    font-family: "Nuckle";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+}
+
+// Password 
+.password__koz {
+    border: none;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 13px;
+    background-color: #FFF;
+    cursor: pointer;
+    margin-top: -67px;
+    margin-left: 100px;
+}
+
+.koz {
+    display: none;
+}
+
+.modal__singn {
+    position: absolute;
+    width: 467px;
+    height: 460px;
+    left: 500px;
+    // display: none;
+}
+
+.sign__modal {
+    display: block;
+}
+
+.modal__heading {
+    color:  #333232;
+
+    /* medium 28 */
+    font-family: "Nuckle";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 591;
+    line-height: 36px; 
+}
+
+.modal__input {
+    display: flex;
+    padding: 11px 206px 10px 14px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid  #E4E7EE;
+}
+
+.modal1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.button__exit {
+    border: none;
+    background-color: #FFF;
+    padding-left: 350px;
+    padding-bottom: 50px;
+}
+
+.modal-content#blur.active{
+    filter: blur(50px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #FFF;
+    visibility: hidden;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#popup.active {
+    top: 50%;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    transform: 0.5s;
+}
