@@ -1,0 +1,21 @@
+.shop__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+@media only screen and ( max-width:1300px) {
+    .shop__list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only  screen and ( max-width:963px) {
+    .shop__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}

@@ -1,0 +1,145 @@
+.about__heading {
+    color: var(--Text-Main, #1E1E1E);
+
+    /* medium 28 */
+    font-family: "Nuckle";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 591;
+    line-height: 36px; 
+}
+
+.about__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.about__item {
+    width: 210px;
+    height: 357px;
+    border-radius: 10px;
+    background:  #FFF;
+    padding-left: 10px;
+}
+
+.about__catch {
+    color:  #0D63F3;
+
+    /* medium 18 */
+    font-family: "Nuckle";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 591;
+    line-height: normal;
+}
+
+.about__text {
+    color:  #1E1E1E;
+
+    font-family: "Nuckle";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+}
+
+.about__text1 {
+    color:  #6C757D;
+
+    /* Regular 14 */
+    font-family: "Nuckle";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+}
+
+.about__btn {
+    color:  #FFF;
+
+    font-family: Nuckle;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.about__aa {
+    padding-left: 10px;
+}
+
+.about__div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about__btn {
+    border-radius: 8px;
+    background:  #0D63F3;
+}
+
+.about__span {
+    border: none;
+    background-color: #FFF;
+    align-items: center;
+    position: absolute;
+    transform: translate(160px, -50px);
+}
+
+.about__button {
+    display: flex;
+    width: 1230px;
+    height: 50px;
+    padding: 17px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background:  #FFF;
+
+    // Text 
+    color: var(--Text-Main, #1E1E1E);
+    text-align: center;
+    
+    /* medium 18 */
+    font-family: "Nuckle";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 591;
+    line-height: normal;
+    border: none;
+    margin-bottom: 60px;
+}
+
+@media only  screen and ( max-width:1300px) {
+    .about__list {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+    }
+
+    .hero__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    .list__about {
+        display: none;
+    }
+
+    .about__button {
+        display: none;
+    }
+}
+
+@media only  screen and ( max-width:963px) {
+    .about__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}

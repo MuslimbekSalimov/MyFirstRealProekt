@@ -1,6 +1,7 @@
 .header {
     // margin-top: 20px;
     background-color: #fff;
+
 }
 
 .header_1 {
@@ -431,4 +432,111 @@
 
   .modal {
     text-align: center;
+  }
+
+  .button {
+    border: none;
+    background-color: #FFF;
+    display: none;
+  }
+
+  .btn__menu {
+    display: none;
+  }
+
+  .btn__exit {
+    display: none;
+  }
+
+
+  @media only screen and ( max-width: 1334px ) {
+    .header_1 {
+        margin: 0px;
+        padding: 0px;
+    }
+  }
+
+  @media only screen and ( max-width: 1268px )  {
+    .header__like {
+        display: none;
+    }
+
+    .carusel {
+        display: none;
+    }
+
+    .carusel1 {
+        display: none;
+    }
+
+    .header__savat {
+        display: none;
+    }
+  }
+
+  @media only screen and ( max-width: 827px) {
+    .item__katalog {
+        display: none;
+    }
+
+    .header_1 {
+        display: none;
+    }
+
+    .header {
+        margin-top: 20px;
+    }
+  }
+
+  @media only screen and ( max-width: 686px) {
+    .header_kirish {
+        display: none;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 41px;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .btn__exit {
+        display: none;
+    }
+
+    .menu__btn {
+        display: none;
+    }
+
+    .exit__btn {
+        display: block;
+    }
+
+    .header__item {
+        display: flex;
+        align-items: center;
+    }
+
+    .button {
+        position: absolute;
+        transform: translate(-200px);
+    }
+  }
+
+  @media only screen and ( max-width:490px){
+    .input {
+        width: 220px;
+    }
+
+    .button {
+        transform: translate(-100px);
+    }
   }

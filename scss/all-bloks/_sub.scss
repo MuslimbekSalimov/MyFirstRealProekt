@@ -1,0 +1,21 @@
+.sub__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 33px;
+}
+
+@media only screen and ( max-width:1300px) {
+    .sub__list {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media only  screen and ( max-width:963px) {
+    .sub__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}

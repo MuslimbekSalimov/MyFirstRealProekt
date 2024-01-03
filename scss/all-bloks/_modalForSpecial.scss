@@ -1,24 +1,8 @@
 .sign {
-    // display: none;
-    // justify-content: center;
-    // align-items: center;
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // background-color: rgba(0, 0, 0, .5);
-    // opacity: 0;
-    // transition: opacity .2s ease;
     display: none;
-}
+    position: absolute;
+    background-color: #FFF;
 
-.sign.visible {
-    opacity: 1;
-}
-
-.in__sign {
-    display: block;
 }
 
 .sign__for {
@@ -34,7 +18,7 @@
     padding-left: 300px;
 }
 
-.sign__heading {
+.modal__heading {
     color:  #333232;
 
     /* medium 28 */
@@ -99,30 +83,27 @@
     font-style: normal;
     font-weight: 539;
     line-height: normal;
-}
-
-// Password 
-.password__koz {
     border: none;
-    position: absolute;
-    margin-left: -50px;
-    margin-top: 13px;
     background-color: #FFF;
-    cursor: pointer;
-    margin-top: -67px;
-    margin-left: 100px;
-}
-
-.koz {
-    display: none;
 }
 
 .modal__singn {
-    position: absolute;
+    position: fixed;
     width: 467px;
     height: 460px;
     left: 500px;
     // display: none;
+    // display: none;
+}
+
+.sign__modal {
+    display: block;
+    background-color: #FFF;
+
+}
+
+.birmodal {
+    display: none;
 }
 
 .sign__modal {
@@ -138,6 +119,7 @@
     font-style: normal;
     font-weight: 591;
     line-height: 36px; 
+    padding-top: 50px;
 }
 
 .modal__input {
@@ -149,10 +131,42 @@
 }
 
 .modal1 {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    background-color: #FFF;
+    margin-left: 450px;
+    border-radius: 12px;
+    width: 466px;
+    height: 425px;
+    flex-shrink: 0;
+
+}
+
+.modal__button {
+    display: flex;
+    width: 346px;
+    height: 40px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background:  #2F7AF8;
+    border: none;
+
+    color:  #FFF;
+    text-align: center;
+    
+    /* Regular 16 */
+    font-family: "Nuckle";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+    letter-spacing: 0.16px;
 }
 
 .button__exit {
@@ -162,30 +176,201 @@
     padding-bottom: 50px;
 }
 
-.modal-content#blur.active{
-    filter: blur(50px);
-    pointer-events: none;
-    user-select: none;
-}
 
-#popup {
-    position: absolute;
-    top: 40%;
+.modal__div {
+    position: fixed;
+    margin: 0;
+    padding: 0;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    padding: 50px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
-    background: #FFF;
-    visibility: hidden;
-    opacity: 1;
-    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    z-index: 100;
+    width: 460px;
+    height: 450px;
+    background-color: #FFF;
+    border-radius: 12px;
+    transition: all 0.5s ease-in-out;
+    // margin-left: 450px;
+    border-radius: 12px;
+    width: 466px;
+    height: 425px;
+    flex-shrink: 0;
 }
 
-#popup.active {
-    top: 50%;
-    visibility: visible;
+.modal__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    margin: 20px ;
+    transition: all 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.modal__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn__sign {
+    display: flex;
+    width: 334px;
+    height: 40px;
+    padding: 14px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #0D63F3;
+    border: none;
+
+    // Text
+    color: #FFF;
+    text-align: center;
+    
+    /* Regular 16 */
+    font-family: "Nuckle";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 539;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    transition: all 0.5s ease-in-out;
+}
+
+.sign__btn {
+    border-radius: 8px;
+    border: 1px solid  #4D5EF6;
+    background:  linear-gradient(270deg, #4D5EF6 0%, #F64D4D 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+// Overlay
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    // transition: all 0.3s ease-in-out;
+}
+
+.btn__closse {
+    border: none;
+    background-color: #FFF;
+    font-size: 20px;
+    transform: translate(185px, -80px);
+    transition: all 0.5s ease-in-out;
+}
+
+.modal2 {
     position: absolute;
-    opacity: 1;
-    transform: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 50px;
+    background-color: #FFF;
+    margin-left: 450px;
+    border-radius: 12px;
+    width: 466px;
+    height: 425px;
+    flex-shrink: 0;
+
+}
+
+.modalkala {
+    display: none;
+}
+
+#modal2__show {
+    display: block;
+}
+
+.numbermodal__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.numbermodal__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.closse__btn {
+    transform: translate(220px, -90px);
+}
+
+.overloy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+
+.parol__modal {
+    margin: 100px;
+    position: absolute;
+    background-color: #FFF;
+    margin-left: 450px;
+    border-radius: 12px;
+    width: 466px;
+    height: 425px;
+    flex-shrink: 0;    
+}
+
+.Regstration__modal {
+    margin: 100px;
+    position: absolute;
+    background-color: #FFF;
+    margin-left: 450px;
+    border-radius: 12px;
+    width: 466px;
+    height: 425px;
+    flex-shrink: 0;
+}
+
+.finish__modal {
+    margin: 100px;
+    position: absolute;
+    background-color: #FFF;
+    margin-left: 450px;
+    border-radius: 12px;
+    width: 466px;
+    height: 425px;
+    flex-shrink: 0;
+
+}
+
+.color {
+    background-color: #FFF;
+    border-radius: 12px;
 }
