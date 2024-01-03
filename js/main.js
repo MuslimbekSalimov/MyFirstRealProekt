@@ -104,44 +104,95 @@ document.addEventListener('keydown', (e) => {
 
 
 // Maxsulotlar Rendr
-const elAboutList = document.querySelector('.about__list')
+const elList = document.querySelector('.about__list')
 const elTemplate = document.getElementById('template').content;
+const elTovarsSearch = document.querySelector('.input')
 
 const renderTovars = (array) => {
 
-    array.forEach((tovars) => {
-        const tovarsTemplate = elTemplate.cloneNode(true)
+    array.forEach((just) => {
 
-        tovarsTemplate.querySelector('.about__img').src = tovars.poster;
-        tovarsTemplate.querySelector('.about__catch').textContent = tovars.title;
-        tovarsTemplate.querySelector('.about__text').textContent = tovars.narx;
-        // tovarsTemplate.querySelector('.about__text').textContent = tovars.overview;
-        tovarsTemplate.querySelector(".about__text1").textContent = tovars.numbers;
+        var TemplateKnowledge = elTemplate.cloneNode(true)
 
-        elAboutList.appendChild(tovarsTemplate)
+        TemplateKnowledge.querySelector('.about__img').src = just.poster
+        TemplateKnowledge.querySelector('.about__catch').textContent = just.title
+        TemplateKnowledge.querySelector('.about__text').textContent = just.narx
+        TemplateKnowledge.querySelector('.about__text1').textContent = just.genres
+
+        elList.appendChild(TemplateKnowledge)
     });
 }
 
-renderTovars(tovars)  
+renderTovars(just)  
 
+// Search
 
-// Maxsulotlar Render 2 
-const elErrorList = document.querySelector('.error__list')
+function SearchInput(){
+    elList.innerHTML = null 
 
-const toverRenders = (array) => {
-    array.forEach((tovars) => {
-        const templateTovars = elTemplate.cloneNode(true)
+    const inputValue = elTovarsSearch.value.trim()
 
-        templateTovars.querySelector('.about__img').src = tovars.poster;
-        templateTovars.querySelector('.about__catch').textContent = tovars.title;
-        templateTovars.querySelector('.about__text').textContent = tovars.narx;
-        templateTovars.querySelector(".about__text1").textContent = tovars.numbers;
+    const search = new RegExp(inputValue, 'gi');
 
-        elErrorList.appendChild(templateTovars)
-    })
+    const input = just.filter((just) => just.narx.match(search))
+
+    renderTovars(input,elList)
 }
 
-toverRenders(tovars)
+elTovarsSearch.addEventListener("input",SearchInput)
+
+
+
+
+
+
+// // Maxsulotlar Render 2 
+const elAboutList = document.querySelector('.about__list')
+const elAboutTemplate = document.getElementById('template').content;
+// const elTovarsSearch = document.querySelector('.input')
+const elCarusel = document.querySelector('.carusel')
+const elHeading = document.querySelector('.hero__heading2')
+const elHEadingBtn = document.querySelector('.hero__more')
+
+const aboutRenders = (array) => {
+
+    array.forEach((just) => {
+
+        var TemplateKnowledge = elAboutTemplate.cloneNode(true)
+
+        TemplateKnowledge.querySelector('.about__img').src = just.poster
+        TemplateKnowledge.querySelector('.about__catch').textContent = just.title
+        TemplateKnowledge.querySelector('.about__text').textContent = just.narx
+        TemplateKnowledge.querySelector('.about__text1').textContent = just.genres
+
+        elList.appendChild(TemplateKnowledge)
+    });
+}
+
+renderTovars(just)  
+
+// Search
+
+function SearchInput(){
+    elList.innerHTML = null 
+
+    const inputValue = elTovarsSearch.value.trim()
+
+    const search = new RegExp(inputValue, 'gi');
+
+    const input = just.filter((just) => just.narx.match(search))
+
+    aboutRenders(input,elAboutList)
+}
+
+elTovarsSearch.addEventListener("input",SearchInput()  )
+elTovarsSearch.addEventListener("input", (evt) => {
+    elCarusel.classList.add('hidden')
+    elKategoriyalarList.classList.add('hidden')
+    elHeading.classList.add('hidden')
+    elHEadingBtn.classList.add('hidden')
+}) 
+
 
 
 // Kategoriyalar Rendr
@@ -150,7 +201,7 @@ const elTemplateHero = document.getElementById('templatee').content
 
 const kategoriyalarRender = (array) => {
     array.forEach((kategoriyalar) => {
-        const templateKateg = elTemplateHero.cloneNode(true)
+        const templateKateg = elTemplateHero.cloneNode(true)                    
 
         templateKateg.querySelector('.hero__img').src = kategoriyalar.poster;
         templateKateg.querySelector('.hero__heading').textContent = kategoriyalar.title;
@@ -197,18 +248,6 @@ const shopsRender = (array) => {
 
 shopsRender(shops)
 
-// Search
-const elTovarsSearch = document.querySelector('.input')
-
-elTovarsSearch.addEventListener('change', (evt) => {
-    const searchInput = evt.target.value.trim()
-
-    const regax = new RegExp (searchInput, 'gi')
-
-    const filtredRegax = tovars.filter((tovar) => tovar.narx.match(regax));
-
-    renderTovars(filtredRegax, elAboutList)
-})
 
 // Hamburger 
 const elBtn = document.getElementById('button')

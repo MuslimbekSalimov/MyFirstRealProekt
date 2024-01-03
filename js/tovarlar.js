@@ -1,11 +1,11 @@
-const tovars = [
+const just = [
 	{
 		id: '287943',
 		title: '299 000 som',
 		narx:"Apple Airpods Pro simsiz quloqchin  Oq rangda" ,
 		poster: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp13-space-m1-2020?wid=1000&hei=1000&fmt=jpeg&qlt=95&.v=1628621779000',
 		numbers:'1230 ta Buyurtma',
-		genres: ['Smartfonlar', 'Comedy', 'Fantasy'],
+		genres: ['Smartfonlar', 'Comedy', 'Fantasy' ,'Tank'],
 	},
 	{
 		id: '287943',
