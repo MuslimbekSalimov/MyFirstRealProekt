@@ -16,7 +16,7 @@ const elOverlay = document.getElementById('overlay')
 
 elBtnShow.addEventListener('click', () => {
     elModal.classList.remove('hidden')
-    elOverlay.classList.remove('hidden')
+    elOverlay      .classList.remove('hidden')
     // elKirish.classList.add("hidden")
 })
 
